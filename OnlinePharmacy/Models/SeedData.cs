@@ -15,8 +15,12 @@ namespace OnlinePharmacy.Models
             ApplicationDbContext context = app.ApplicationServices
                 .GetRequiredService<ApplicationDbContext>();
             context.Database.Migrate();
-            if (!context.Products.Any())
+            foreach(var p in context.Products)
             {
+                context.Products.Remove(p);
+            }
+            //if (!context.Products.Any())
+            //{
                 context.Products.AddRange(
                     new Product
                     {
@@ -24,9 +28,15 @@ namespace OnlinePharmacy.Models
                         Description = "Good",
                         Category = "Meds",
                         Price = 100
+                    },
+                    new Product
+                    {
+                        Name = "Gripex",
+                        Category = "Meds",
+                        Price = 200
                     });
                 context.SaveChanges();
-            }
+            //}
         }
     }
 }

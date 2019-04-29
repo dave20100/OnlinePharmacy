@@ -21,20 +21,34 @@ namespace OnlinePharmacy.Models
             }
             //if (!context.Products.Any())
             //{
-                context.Products.AddRange(
-                    new Product
-                    {
-                        Name = "Ibuprom",
-                        Description = "Good",
-                        Category = "Meds",
-                        Price = 100
-                    },
-                    new Product
-                    {
-                        Name = "Gripex",
-                        Category = "Meds",
-                        Price = 200
-                    });
+            context.Products.AddRange(
+                new Product
+                {
+                    Name = "Ibuprom",
+                    Description = "Good",
+                    Category = "Meds",
+                    Price = 100
+                },
+                new Product
+                {
+                    Name = "Gripex",
+                    Category = "Meds",
+                    Price = 200
+                },
+                new Product
+                {
+                    Name = "AA",
+                    Category = "Med",
+                    Price = 1000
+                }, 
+                new Product
+                {
+                    Name = "AA",
+                    Category = "Med",
+                    Price = 1000
+                }
+                );
+
                 context.SaveChanges();
             //}
         }

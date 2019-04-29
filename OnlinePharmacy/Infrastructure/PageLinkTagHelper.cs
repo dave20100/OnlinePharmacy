@@ -4,10 +4,6 @@ using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using OnlinePharmacy.Models.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace OnlinePharmacy.Infrastructure
 {
@@ -20,6 +16,7 @@ namespace OnlinePharmacy.Infrastructure
         {
             urlHelperFactory = helperFactory;
         }
+
         [ViewContext]
         [HtmlAttributeNotBound]
         public ViewContext ViewContext { get; set; }

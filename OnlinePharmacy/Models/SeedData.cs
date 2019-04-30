@@ -46,6 +46,28 @@ namespace OnlinePharmacy.Models
                     Name = "AA",
                     Category = "Med",
                     Price = 1000
+                }, new Product
+                {
+                    Name = "AA",
+                    Category = "Med",
+                    Price = 1000
+                },
+                new Product
+                {
+                    Name = "AA",
+                    Category = "Med",
+                    Price = 1000
+                }, new Product
+                {
+                    Name = "AA",
+                    Category = "Med",
+                    Price = 1000
+                },
+                new Product
+                {
+                    Name = "AA",
+                    Category = "Med",
+                    Price = 1000
                 }
                 );
 

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.28721.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlinePharmacy", "OnlinePharmacy\OnlinePharmacy.csproj", "{7CA143EA-790F-4C62-A925-DF51C1A57AE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlinePharmacy.Tests", "OnlinePharmacy.Tests\OnlinePharmacy.Tests.csproj", "{D2D1E73D-C01E-42B7-8B64-280F96E29D9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlinePharmacy.Tests", "OnlinePharmacy.Tests\OnlinePharmacy.Tests.csproj", "{D2D1E73D-C01E-42B7-8B64-280F96E29D9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

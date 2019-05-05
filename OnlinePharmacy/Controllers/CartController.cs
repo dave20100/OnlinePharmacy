@@ -58,7 +58,7 @@ namespace OnlinePharmacy.Controllers
             var data = HttpContext.Session.GetString("Cart");
             if(data == null)
             {
-                return default(Cart);
+                return new Cart();
             }
             return JsonConvert.DeserializeObject<Cart>(data);
         }

@@ -25,6 +25,8 @@ namespace OnlinePharmacy
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration["Data:PharmacyProducts:ConnectionString"]));
             services.AddTransient<IProductRepository, EFProductRepository>();
+            services.AddMemoryCache();
+            services.AddSession();
             services.AddMvc();
         }
 
@@ -34,6 +36,7 @@ namespace OnlinePharmacy
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

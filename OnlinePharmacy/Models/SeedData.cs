@@ -15,13 +15,13 @@ namespace OnlinePharmacy.Models
             ApplicationDbContext context = app.ApplicationServices
                 .GetRequiredService<ApplicationDbContext>();
             context.Database.Migrate();
-            foreach(var p in context.Products)
-            {
-                context.Products.Remove(p);
-            }
-            //if (!context.Products.Any())
+            //foreach(var p in context.Products)
             //{
-            context.Products.AddRange(
+            //    context.Products.Remove(p);
+            //}
+            if (!context.Products.Any())
+            {
+                context.Products.AddRange(
                 new Product
                 {
                     Name = "Ibuprom",
@@ -72,7 +72,7 @@ namespace OnlinePharmacy.Models
                 );
 
                 context.SaveChanges();
-            //}
+            }
         }
     }
 }

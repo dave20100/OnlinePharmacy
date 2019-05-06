@@ -16,7 +16,7 @@
     },
     {
       "provider": "unpkg",
-      "library": "fontawesome@4.7.0",
+      "library": "font-awesome-5-css@5.4.1",
       "destination": "wwwroot/lib/fontawesome"
     }
 ]

@@ -5,13 +5,12 @@
     {
         <small class="navbar-text">
             <b>Your cart:</b>
-            @Model.Lines.Sum(x => x.Quantity) item(s)
-            @Model.ComputeTotalValue().ToString("c")
+            @Model.Lines.Sum(x => x.Quantity) item(s) @Model.ComputeTotalValue().ToString("c")
         </small>
     }
     <a class="btn btn-sm btn-secondary nav-item"
        asp-controller="Cart" asp-action="Index"
        asp-route-returnurl="@ViewContext.HttpContext.Request.PathAndQuery()">
-        <i class="fa fa-shoppingcart"></i>
+        <i class="fas fa-shopping-cart"></i>
     </a>
 </div>

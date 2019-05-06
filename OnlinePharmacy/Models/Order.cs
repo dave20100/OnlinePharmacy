@@ -16,12 +16,13 @@ namespace OnlinePharmacy.Models
 
         [Required(ErrorMessage = "Please enter a name")]
         public string Name { get; set; }
-
+        
         [Required(ErrorMessage ="Please enter the address")]
         public string Address { get; set; }
         
         [Required(ErrorMessage = "Please enter a city name")]
         public string City { get; set; }
+        
         public string Zip { get; set; }
         
         

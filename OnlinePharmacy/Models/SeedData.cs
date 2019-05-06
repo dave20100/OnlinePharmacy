@@ -34,41 +34,8 @@ namespace OnlinePharmacy.Models
                     Name = "Gripex",
                     Category = "Meds",
                     Price = 200
-                },
-                new Product
-                {
-                    Name = "AA",
-                    Category = "Med",
-                    Price = 1000
-                }, 
-                new Product
-                {
-                    Name = "AA",
-                    Category = "Med",
-                    Price = 1000
-                }, new Product
-                {
-                    Name = "AA",
-                    Category = "Med",
-                    Price = 1000
-                },
-                new Product
-                {
-                    Name = "AA",
-                    Category = "Med",
-                    Price = 1000
-                }, new Product
-                {
-                    Name = "AA",
-                    Category = "Med",
-                    Price = 1000
-                },
-                new Product
-                {
-                    Name = "AA",
-                    Category = "Med",
-                    Price = 1000
                 }
+                
                 );
 
                 context.SaveChanges();

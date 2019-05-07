@@ -63,5 +63,11 @@ namespace OnlinePharmacy.Controllers
             }
             return RedirectToAction("Index", new { returnUrl });
         }
+
+        public RedirectToActionResult ClearCart(string returnUrl)
+        {
+            cart.Clear();
+            return RedirectToAction("Index", new { returnUrl });
+        }
     }
 }

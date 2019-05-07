@@ -25,13 +25,14 @@ namespace OnlinePharmacy.Models
                 new Product
                 {
                     Name = "Ibuprom",
-                    Description = "Good",
+                    Description = "Pain reliever",
                     Category = "Meds",
                     Price = 100
                 },
                 new Product
                 {
                     Name = "Gripex",
+                    Description = "",
                     Category = "Meds",
                     Price = 200
                 }

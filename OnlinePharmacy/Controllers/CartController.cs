@@ -48,6 +48,17 @@ namespace OnlinePharmacy.Controllers
 
             if(product != null)
             {
+                cart.RemoveProduct(product);
+            }
+            return RedirectToAction("Index", new { returnUrl });
+        }
+
+        public RedirectToActionResult RemoveLineFromCart(int productId, string returnUrl)
+        {
+            Product product = repository.Products.FirstOrDefault(p => p.ProductID == productId);
+
+            if (product != null)
+            {
                 cart.RemoveLine(product);
             }
             return RedirectToAction("Index", new { returnUrl });

@@ -30,6 +30,12 @@ namespace OnlinePharmacy.Models
             Session.SetJson("Cart", this);
         }
 
+        public override void RemoveProduct(Product product)
+        {
+            base.RemoveProduct(product);
+            Session.SetJson("Cart", this);
+        }
+
         public override void RemoveLine(Product product)
         {
             base.RemoveLine(product);

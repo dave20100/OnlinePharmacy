@@ -16,15 +16,29 @@
         @foreach(var line in Model.Cart.Lines)
         {
             <tr>
-                <td class="text-center">@line.Quantity</td>
+                <td class="text-center">
+                    <form asp-action="RemoveFromCart" class="float-left" method="post">
+                        <input type="hidden" name="ProductID" value="@line.Product.ProductID" />
+                        <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-sm btn-danger fa fa-minus"></button>
+                    </form>
+                    @line.Quantity
+                    <form asp-action="AddToCart" class="float-right" method="post">
+                        <input type="hidden" name="ProductID" value="@line.Product.ProductID" />
+                        <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
+                        <button type="submit" class="btn btn-sm btn-success fa fa-plus"></button>
+                    </form>
+                </td>
                 <td class="text-left">@line.Product.Name</td>
                 <td class="text-right">@line.Product.Price.ToString("c")</td>
                 <td class="text-right">@((line.Quantity * line.Product.Price).ToString("c"))</td>
-                <td>
-                    <form asp-action="RemoveFromCart" method="post">
+                <td >
+                    
+                    
+                    <form asp-action="RemoveLineFromCart" method="post">
                         <input type="hidden" name="ProductID" value="@line.Product.ProductID" />
                         <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
-                        <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                        <button type="submit" class="btn btn-sm btn-outline-danger">Remove</button>
                     </form>
                 </td>
             </tr>

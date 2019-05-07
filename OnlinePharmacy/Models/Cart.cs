@@ -27,7 +27,7 @@ namespace OnlinePharmacy.Models
             }
         }
 
-        public virtual void RemoveLine(Product product)
+        public virtual void RemoveProduct(Product product)
         {
             var productToRemove = lineCollection.FirstOrDefault(l => l.Product.ProductID == product.ProductID);
             if (productToRemove.Quantity > 1)
@@ -39,8 +39,11 @@ namespace OnlinePharmacy.Models
                 lineCollection.Remove(productToRemove);
             }
         }
-       
-            //lineCollection.RemoveAll(l => l.Product.ProductID == product.ProductID);
+
+        public virtual void RemoveLine(Product product)
+        {
+            lineCollection.RemoveAll(l => l.Product.ProductID == product.ProductID);
+        }
 
         public virtual decimal ComputeTotalValue() =>
             lineCollection.Sum(e => e.Product.Price * e.Quantity);

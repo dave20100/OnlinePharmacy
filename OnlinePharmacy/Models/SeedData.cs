@@ -34,7 +34,8 @@ namespace OnlinePharmacy.Models
                     Name = "Gripex",
                     Description = "",
                     Category = "Meds",
-                    Price = 200
+                    Price = 200,
+                    IsPrescription = true
                 }
                 
                 );

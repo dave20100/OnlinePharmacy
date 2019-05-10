@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using OnlinePharmacy.Migrations;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -25,6 +26,6 @@ namespace OnlinePharmacy.Models
         
         public string Zip { get; set; }
         
-        
+        public Prescription Prescription { get; set; }
     }
 }

@@ -1,0 +1,50 @@
+﻿@model Order
+
+<h3>@Model.Name</h3>
+<h2>Enter prescription details</h2>
+<div asp-validation-summary="All" class="text-danger"></div>
+<form asp-action="Checkout" method="post">
+    <h3>Order details</h3>
+    <div class="form-group">
+        <label>Name:</label><input asp-for="Name" class="form-control"  />
+    </div>
+    <h3>Address</h3>
+    <div class="form-group">
+        <label>Address:</label><input asp-for="Address" class="form-control"  />
+    </div>
+    <div class="form-group">
+        <label>City:</label><input asp-for="City" class="form-control"  />
+    </div>
+    <div class="form-group">
+        <label>Zip:</label><input asp-for="Zip" class="form-control"  />
+    </div>
+    <h3>Prescription information</h3>
+    <div class="form-group">
+        <label>Customer name:</label><input asp-for="Prescription.CustomerName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Customer address:</label><input asp-for="Prescription.CustomerAddress" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>PESEL:</label><input asp-for="Prescription.PESEL" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>NFZ facility number:</label><input asp-for="Prescription.NFZNumber" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Medicine name:</label><input asp-for="Prescription.MedicineName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Clinic info:</label><input asp-for="Prescription.ClinicInfo" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Doctors name:</label><input asp-for="Prescription.DoctorsName" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Date of creation:</label><input type="date" asp-for="Prescription.DateOfCreating" class="form-control" />
+    </div>
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Complete Order" />
+    </div>
+</form>
+

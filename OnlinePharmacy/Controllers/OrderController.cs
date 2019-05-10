@@ -26,8 +26,13 @@ namespace OnlinePharmacy.Controllers
             {
                 ModelState.AddModelError("", "Cart is empty");
             }
+            
             if (ModelState.IsValid)
             {
+                if (cart.Lines.Any((l) => l.Product.IsPrescription) && order.Prescription == null)
+                {
+                    return View("Prescription", order);
+                }
                 order.Lines = cart.Lines.ToArray();
                 repository.SaveOrder(order);
                 return RedirectToAction(nameof(Completed));

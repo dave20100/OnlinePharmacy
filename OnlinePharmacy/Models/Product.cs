@@ -12,6 +12,7 @@ namespace OnlinePharmacy.Models
         public string Description { get; set; }
         public decimal Price { get; set; }
         public string Category { get; set; }
-        public bool IsPrescription { get; set; }
+        public bool IsPrescripted { get; set; }
+        public int RefundPercentage { get; set; }
     }
 }

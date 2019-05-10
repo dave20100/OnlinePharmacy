@@ -35,7 +35,7 @@ namespace OnlinePharmacy.Models
                     Description = "",
                     Category = "Meds",
                     Price = 200,
-                    IsPrescription = true
+                    IsPrescripted = true
                 }
                 
                 );

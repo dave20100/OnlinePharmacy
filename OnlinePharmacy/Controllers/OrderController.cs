@@ -29,7 +29,7 @@ namespace OnlinePharmacy.Controllers
             
             if (ModelState.IsValid)
             {
-                if (cart.Lines.Any((l) => l.Product.IsPrescription) && order.Prescription == null)
+                if (cart.Lines.Any((l) => l.Product.IsPrescripted) && order.Prescription == null)
                 {
                     return View("Prescription", order);
                 }

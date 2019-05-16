@@ -26,18 +26,42 @@ namespace OnlinePharmacy.Models
                 {
                     Name = "Ibuprom",
                     Description = "Pain reliever",
-                    Category = "Meds",
-                    Price = 100
+                    Category = "Pain Relievers",
+                    Price = 9.99M
                 },
                 new Product
                 {
                     Name = "Gripex",
-                    Description = "",
-                    Category = "Meds",
+                    Description = "Pain reliever",
+                    Category = "Pain Relievers",
                     Price = 200,
                     IsPrescripted = true
+                },
+                new Product
+                {
+                    Name = "2KC",
+                    Category = "Hangover"
+                },
+                new Product
+                {
+                    Name = "Acatar",
+                    Category = "Runny nose"
+                },
+                new Product
+                {
+                    Name = "Neo-Angin",
+                    Category = "Resistance"
+                },
+                new Product
+                {
+                    Name = "Rutinacea",
+                    Category = "Resistance"
+                },
+                new Product
+                {
+                    Name = "Witamina K",
+                    Category = "Vitamins"
                 }
-                
                 );
 
                 context.SaveChanges();

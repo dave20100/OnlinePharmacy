@@ -14,5 +14,6 @@ namespace OnlinePharmacy.Models
         public string Category { get; set; }
         public bool IsPrescripted { get; set; }
         public int RefundPercentage { get; set; }
+        public int AmountInStock { get; set; }
     }
 }

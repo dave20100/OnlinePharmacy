@@ -32,7 +32,7 @@ namespace OnlinePharmacy.Controllers
                 if (cart.Lines.Any((l) => l.Product.IsPrescripted) && order.Prescription == null)
                 {
                     return View("Prescription", order);
-                }
+                } 
                 order.Lines = cart.Lines.ToArray();
                 repository.SaveOrder(order);
                 return RedirectToAction(nameof(Completed));

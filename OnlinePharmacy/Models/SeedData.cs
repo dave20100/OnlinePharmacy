@@ -26,108 +26,125 @@ namespace OnlinePharmacy.Models
                 {
                     Name = "Ibuprom",
                     Category = "Pain Relievers",
-                    Price = 9.99M
+                    Price = 9.99M,
+                    AmountInStock = 2
                 },
                 new Product
                 {
                     Name = "Gripex",
                     Category = "Pain Relievers",
                     Price = 12.99M,
-                    IsPrescripted = true
+                    IsPrescripted = true,
+                    AmountInStock = 9
                 },
                 new Product
                 {
                     Name = "2KC",
                     Category = "Hangover",
                     IsPrescripted = true,
-                    Price = 5.99M
+                    Price = 5.99M,
+                    AmountInStock = 8
                 },
                 new Product
                 {
                     Name = "Acatar",
                     Category = "Runny nose",
-                    Price = 8.49M
+                    Price = 8.49M,
+                    AmountInStock = 5
                 },
                 new Product
                 {
                     Name = "Neo-Angin",
                     Category = "Resistance",
                     Price = 3.29M,
-                    IsPrescripted = true
+                    IsPrescripted = true,
+                    AmountInStock = 4
                 },
                 new Product
                 {
                     Name = "Rutinacea",
                     Category = "Resistance",
-                    Price = 19.99M
+                    Price = 19.99M,
+                    AmountInStock = 0
                 },
                 new Product
                 {
                     Name = "Vitamin K",
                     Category = "Vitamins",
-                    Price = 2.0M
+                    Price = 2.0M,
+                    AmountInStock = 12
                 },
                 new Product
                 {
                     Name = "Xanax",
                     Category = "Calming",
                     IsPrescripted = true,
-                    Price = 29.99M
+                    Price = 29.99M,
+                    AmountInStock = 4
                 },
                 new Product
                 {
                     Name = "Regulon",
                     Category = "Contraception",
-                    Price = 11.49M
+                    Price = 11.49M,
+                    AmountInStock = 21
                 },
                 new Product
                 {
                     Name = "Pritor Plus",
                     Category = "Calming",
-                    Price = 16.99M
+                    Price = 16.99M,
+                    AmountInStock = 95
                 },
                 new Product
                 {
                     Name = "Voltaren",
                     Category = "Pain Relievers",
-                    Price = 15.0M
+                    Price = 15.0M,
+                    AmountInStock = 7
                 },
                 new Product
                 {
                     Name = "Apap",
                     Category = "Pain Relievers",
-                   Price = 12.99M
+                   Price = 12.99M,
+                    AmountInStock = 1
                 },
                 new Product
                 {
                     Name = "Ibum",
                     Category = "Pain Relievers",
-                    Price = 13.67M
+                    Price = 13.67M,
+                    AmountInStock = 4
 
                 },
                 new Product
                 {
                     Name = "After",
                     Category = "Hangover",
-                    Price = 8.25M
+                    Price = 8.25M,
+                    AmountInStock = 6
                 },
                 new Product
                 {
                     Name = "Vitamin C",
                     Category = "Vitamins",
-                    Price = 11.19M
+                    Price = 11.19M,
+                    AmountInStock = 11
                 },
                 new Product
                 {
                     Name = "Vitamin A",
                     Category = "Vitamins",
-                    Price = 6.99M
+                    Price = 6.99M,
+                    AmountInStock = 1
                 },
                 new Product
                 {
                     Name = "Vitamin B",
                     Category = "Vitamins",
-                    Price = 4.99M
+                    Price = 4.99M,
+                    AmountInStock = 2
                 }
                 
                 );

@@ -8,7 +8,7 @@ namespace OnlinePharmacy.Controllers
     public class ProductController : Controller
     {
         private IProductRepository repository;
-        public int PageSize = 6;
+        public int PageSize = 5;
         public ProductController(IProductRepository repo)
         {
             repository = repo;
@@ -19,7 +19,7 @@ namespace OnlinePharmacy.Controllers
         {
             Products = repository.Products
             .Where(p => category == null || p.Category == category)
-            .OrderBy(p => p.ProductID)
+            .OrderBy(p => p.Name)
             .Skip((productPage - 1) * PageSize)
             .Take(PageSize),
             PagingInfo = new PagingInfo

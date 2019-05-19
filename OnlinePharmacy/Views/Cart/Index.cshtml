@@ -13,7 +13,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var line in Model.Cart.Lines)
+        @foreach (var line in Model.Cart.Lines)
         {
             <tr>
                 <td class="text-center">
@@ -32,9 +32,9 @@
                 <td class="text-left">@line.Product.Name</td>
                 <td class="text-right">@line.Product.Price.ToString("c")</td>
                 <td class="text-right">@((line.Quantity * line.Product.Price).ToString("c"))</td>
-                <td >
-                    
-                    
+                <td>
+
+
                     <form asp-action="RemoveLineFromCart" method="post">
                         <input type="hidden" name="ProductID" value="@line.Product.ProductID" />
                         <input type="hidden" name="returnUrl" value="@Model.ReturnUrl" />
@@ -42,7 +42,9 @@
                     </form>
                 </td>
             </tr>
+
         }
+
     </tbody>
     <tfoot>
         <tr>
@@ -57,6 +59,7 @@
         </tr>
     </tfoot>
 </table>
+<div class="alert alert-danger">The order will be delivered in @(Model.Cart.Lines.Any(l => l.Quantity > l.Product.AmountInStock)? 10:3) days</div>
 
 <div class="text-center">
     <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>

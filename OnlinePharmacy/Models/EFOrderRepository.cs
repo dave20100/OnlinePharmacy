@@ -20,11 +20,24 @@ namespace OnlinePharmacy.Models
 
         public void SaveOrder(Order order)
         {
-            context.AttachRange(order.Lines.Select(l => l.Product));
-            if(order.OrderID == 0)
+            foreach(var line in order.Lines)
             {
-                context.Orders.Add(order);
+                var product = context.Products.FirstOrDefault(pro => pro.ProductID == line.Product.ProductID);
+                if(product.AmountInStock - line.Quantity >= 0)
+                {
+                    product.AmountInStock -= line.Quantity;
+                }
+                else
+                {
+                    product.AmountInStock = 0;
+                }
+                context.SaveChanges();
             }
+            //context.AttachRange(order.Lines.Select(l => l.Product));
+            //if (order.OrderID == 0)
+            //{
+            //    context.Orders.Add(order);
+            //}
             context.SaveChanges();
         }
     }

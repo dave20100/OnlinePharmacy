@@ -23,7 +23,7 @@ namespace OnlinePharmacy
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer(Configuration["Data:PharmacyProducts:ConnectionString"]));
+            options.UseSqlServer(Configuration["Data:PharmacyProducts:ConnectionString"]).EnableSensitiveDataLogging());
             services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddMemoryCache();
             services.AddSession();

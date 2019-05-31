@@ -59,8 +59,10 @@
         </tr>
     </tfoot>
 </table>
-<div class="alert alert-danger">The order will be delivered in @(Model.Cart.Lines.Any(l => l.Quantity > l.Product.AmountInStock)? 10:3) days</div>
-
+@if (Model.Cart.Lines.Count() != 0)
+{
+<div class="alert alert-danger">The order will be delivered in @(Model.Cart.Lines.Any(l => l.Quantity > l.Product.AmountInStock) ? 10 : 3) days</div>
+}
 <div class="text-center">
     <a class="btn btn-primary" href="@Model.ReturnUrl">Continue Shopping</a>
     <a class="btn btn-primary" asp-action="Checkout" asp-controller="Order">
